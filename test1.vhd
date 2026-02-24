@@ -151,7 +151,7 @@ begin
                 when "00" =>
                  if careCounter>="01" then
                     bdin <= reg1;
-                    anodinput <= "0111";  -- activează primul display
+                    anodinput <= "0111";  -- activeaz primul display
                   else
                      anodinput <= "1111";
                     end if;
@@ -160,15 +160,15 @@ begin
                         bdin <= reg2;
                         anodinput <= "1011"; -- al doilea display
                     else
-                        anodinput <= "1111"; -- nu afisezi nimic
+                        anodinput <= "1111"; -- nu afisez nimic
                     end if;
                 when "10" =>
                     if careCounter = "11" then
                         bdin <= reg3;
-                        anodinput <= "1101";
+                        anodinput <= "1101"; -- al treilea display
                 
                     else
-                        anodinput <= "1111"; -- nu afisezi nimic
+                        anodinput <= "1111"; -- nu afisez nimic
                     end if;
                 when others =>
                     anodinput <= "1111";
